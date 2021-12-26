@@ -33,6 +33,10 @@ plugins:
 
 
 show_downloads: true 
+
+github:
+  zip_url: https://github.com/Pingu1337/pinguLib/archive/refs/heads/master.zip
+  
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
