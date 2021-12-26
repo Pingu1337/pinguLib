@@ -36,6 +36,7 @@ show_downloads: true
 
 github:
   zip_url: https://github.com/Pingu1337/pinguLib/archive/refs/heads/master.zip
+  tar_url: https://github.com/Pingu1337/pinguLib/tarball/master
   
 # Exclude from processing.
 # The following items will not be processed, by default.
