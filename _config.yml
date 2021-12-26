@@ -1,1 +1,4 @@
 theme: jekyll-theme-cayman
+future: true
+timezone: Europe/Stockholm
+safe: true
