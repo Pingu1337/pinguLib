@@ -1,3 +1,7 @@
+---
+permalink: /install/
+---
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +30,7 @@
 
 <body>
     <div class="main">
-
+        
         <!-- <ul style="list-style: none; display: flex;">
             <li><a class="test-nav" href="/index.html">Home</a></li>
             <li><a class="test-nav" href="/pinguLib/components.html">Components</a></li>
@@ -35,22 +39,26 @@
         </ul> -->
 
         <div class="nav">
-            <a class="active" href="/pinguLib/index.html">Home</a>
+            <a href="/pinguLib/index.html">Home</a>
             <a href="/pinguLib/components">Components</a>
-            <a href="/pinguLib/install">Install</a>
+            <a class="active" href="/pinguLib/install">Install</a>
         </div>
 
         <div class="container">
             <div class="textbox">
-               <h1 style="margin-top: 2px;">pinguLib</h1>
-               <p>pinguLib is a free css/js library including components like <a class="text-link" href="/pinguLib/components"><button class="pingu-btn color-pink" style="margin:0;">this button</button></a><br>
-                    or why not <a class="text-link" href="/pinguLib/components"><button class="pingu-btn color-white" style="margin:0;">this button</button></a> ? <br> <br>View all components included in the library <a class="text-link" href="/pinguLib/components">here</a> </p>
-                    
-                    <p>
-                        
-                    <br> <br>
-                    <br> <br>
-                    Follow the <a class="text-link" href="/pinguLib/install">installation guide</a> to get started.
+                <p>
+                    To use the css file include the following between the <span style="color: rgb(24, 71, 228);">&lt;head&gt;</span> tags: <br/>
+                    <input style="display: none;" type="text" value="&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://pingu1337.github.io/pinguLib/css/pinguStyles.css&quot;&gt;" id="pingu-clip">
+                    <div class='make-snippet'><link rel="stylesheet"  type="text/css" href="https://pingu1337.github.io/pinguLib/css/pinguStyles.css"></div>
+                    <button class="pingu-btn color-pink right" id="copy-btn" onclick="CopyClipboard(1)">Copy To Clipboard</button>
+                </p>
+                <br/>
+                
+                <p>
+                    To use the Javascript file include the following between the <span style="color: rgb(24, 71, 228);">&lt;head&gt;</span> tags: <br/>
+                    <input style="display: none;" type="text" value="&lt;script src=&quot;https://pingu1337.github.io/pinguLib/js/pinguScripts.js&quot;&gt;&lt;/script&gt;" id="pingu-clip-1">
+                    <div class='make-snippet'><script src="https://pingu1337.github.io/pinguLib/js/pinguScripts.js"></script></div>
+                    <button class="pingu-btn color-pink right" id="copy-btn" onclick="CopyClipboard(2)">Copy To Clipboard</button>
                 </p>
             </div>
         </div>

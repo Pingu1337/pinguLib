@@ -37,6 +37,16 @@ a:hover{
     color: #000;
 }
 
+.test-nav{
+    border:none;
+    transition: 0s;
+}
+.test-nav:hover{
+    border:none;
+    background-color: transparent;
+}
+
+
 p{
     font-family: Helvetica, sans-serif;
     font-size: 1.2rem;

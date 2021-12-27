@@ -8,6 +8,18 @@ html, body {
     display: flex;
     justify-content: center;
 }
+.test-nav{
+    border:none;
+    transition: 0s;
+}
+.test-nav:hover{
+    border:none;
+    background-color: transparent;
+}
+
+h1{
+    font-family: Helvetica, sans-serif;
+}
 
 a{
     font-family: Helvetica, sans-serif;
@@ -39,6 +51,22 @@ p{
     font-family: Helvetica, sans-serif;
     font-size: 1.2rem;
     line-height: 1.6;
+}
+.text-link{
+    
+    transition: .1s;
+    font-family: Helvetica, sans-serif;
+    font-size: inherit;
+    color: black;
+    padding: 0;
+    color: rgb(71, 57, 199);
+}
+.text-link:hover{
+background-color: transparent;
+border-color: transparent;
+color: rgb(110, 100, 194);
+cursor: pointer;
+text-decoration: none;
 }
 .textbox{
     padding: 10px;
@@ -72,7 +100,7 @@ margin: 10px;
 text-align: center;
 margin-left: auto;
 margin-right: auto;
-margin-top: 10%;
+margin-top: 30px;
 }
 
 .square{
