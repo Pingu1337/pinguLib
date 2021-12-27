@@ -54,3 +54,40 @@
 .right{
     float: right;
 }
+
+.copied{
+    animation: copyanimation 1s forwards;
+    padding-right: 0px;
+    pointer-events: none;
+}
+
+.copied ,.copied:hover{
+    animation: copyanimation 1s forwards;
+    color: #fff;
+    
+}
+
+.copiedback-pink, .copiedback-pink:hover{
+    animation: copybackpink 1s forwards;
+    pointer-events: none;
+}
+
+@keyframes copyanimation {
+    0%{
+        background-color: #fff;
+    }
+
+    100%{
+        background-color: rgb(92, 233, 92);
+        padding-right:55px;
+    }
+}
+@keyframes copybackpink {
+    0%{
+        background-color: rgb(92, 233, 92);
+    }
+
+    100%{
+        background-color: #e9a0a0;
+    }
+}
