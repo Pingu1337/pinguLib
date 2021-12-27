@@ -91,7 +91,7 @@ text-decoration: none;
     margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
-    min-height: 350px;
+    min-height: 400px;
     padding: 20px;
     background-color: #ebebeb;
     border-radius: 0px;
@@ -158,4 +158,24 @@ footer{
 footer p{
     margin: auto 15px;
     float: left;
+}
+
+@media screen and (max-width: 600px) {
+    .main{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .textbox{
+        min-height: auto;
+        height: 60vh;
+    }
+    a{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .active{
+        background-color: transparent;
+        border-color: transparent;
+        color: #fff;
+    }
 }
