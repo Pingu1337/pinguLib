@@ -10,25 +10,46 @@
     <link rel="stylesheet" type="text/css" href="css/pinguStyles.css">
     <link rel="stylesheet" type="text/css" href="/styles.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-markup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.js"></script>
+    
+    <script src="/js/prism.js"></script>
+    <script src="/js/clipboard.js"></script>
     <script src="/js/pinguScripts.js"></script>
     <script src="js/pinguScripts.js"></script>
+
+
+    
+
+
 </head>
 
 <body>
     <div class="main">
 
-        <a href="/pinguLib/test.html">Go to test file</a>
+        <div class="nav">
+            <a class="active" href="/pinguLib/index.html">Home</a>
+            <a href="/pinguLib/components.html">Components</a>
+            <a href="/pinguLib/test.html">TestFile</a>
+        </div>
 
         <div class="container">
             <div class="textbox">
                 <p>
                     To use the css file include the following between the <span style="color: rgb(24, 71, 228);">&lt;head&gt;</span> tag: <br/>
-                    <span style="font-style: italic; color: rgb(213, 166, 245);">&lt;link rel="stylesheet"  type="text/css" href="https://pingu1337.github.io/pinguLib/css/pinguStyles.css"&gt;</span>
+                    <input style="display: none;" type="text" value="&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://pingu1337.github.io/pinguLib/css/pinguStyles.css&quot;&gt;" id="pingu-clip">
+                    <div class='make-snippet'><link rel="stylesheet"  type="text/css" href="https://pingu1337.github.io/pinguLib/css/pinguStyles.css"></div>
+                    <button class="pingu-btn color-pink right" id="copy-btn" onclick="CopyClipboard(1)">Copy To Clipboard</button>
                 </p>
                 <br/>
+                
                 <p>
                     To use the Javascript file include the following between the <span style="color: rgb(24, 71, 228);">&lt;head&gt;</span> tag: <br/>
-                    <span style="font-style: italic; color: rgb(213, 166, 245);">&lt;script src="https://pingu1337.github.io/pinguLib/js/pinguScripts.js"&gt;&lt;script&gt;</span>
+                    <input style="display: none;" type="text" value="&lt;script src=&quot;https://pingu1337.github.io/pinguLib/js/pinguScripts.js&quot;&gt;&lt;/script&gt;" id="pingu-clip-1">
+                    <div class='make-snippet'><script src="https://pingu1337.github.io/pinguLib/js/pinguScripts.js"></script></div>
+                    <button class="pingu-btn color-pink right" id="copy-btn" onclick="CopyClipboard(2)">Copy To Clipboard</button>
                 </p>
             </div>
             <div class="square">
