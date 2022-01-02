@@ -58,3 +58,37 @@ HcolourPicker.oninput = function(){
   HcolorContainer.style.setProperty("--hovbg", this.value);
   btn.style.setProperty("--hovbg", this.value);
 }
+//Color Picker FG
+var fgcolourPicker = document.getElementById("fg-colorpicker");
+var fgcolorContainer = document.getElementById("fg-color-container")
+var fgColorOutput = document.getElementById("fg-colorpicker-value");
+fgcolorContainer.style.setProperty("--btnfg", fgcolourPicker.value);
+fgColorOutput.innerHTML = fgcolourPicker.value
+fgcolourPicker.oninput = function(){
+  fgColorOutput.innerHTML = this.value;
+  fgcolorContainer.style.setProperty("--btnfg", this.value);
+  btn.style.setProperty("--btnfg", this.value);
+}
+//Color Picker FG hover
+var HfgcolourPicker = document.getElementById("fg-colorpicker-hover");
+var HfgcolorContainer = document.getElementById("fg-color-container-hover")
+var HfgColorOutput = document.getElementById("fg-colorpicker-value-hover");
+HfgcolorContainer.style.setProperty("--hovfg", HfgcolourPicker.value);
+HfgColorOutput.innerHTML = HfgcolourPicker.value
+HfgcolourPicker.oninput = function(){
+  HfgColorOutput.innerHTML = this.value;
+  HfgcolorContainer.style.setProperty("--hovfg", this.value);
+  btn.style.setProperty("--hovfg", this.value);
+}
+
+//transition
+var tCheck = document.getElementById("check");
+
+tCheck.oninput = function() {
+  if (tCheck.checked == true){
+    btn.classList.add('transition')
+  }
+  if (tCheck.checked == false){
+    btn.classList.remove('transition');
+  }
+}

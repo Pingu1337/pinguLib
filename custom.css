@@ -4,6 +4,8 @@
 
     --btnbg:#e9a0a0;
     --btnfg:#fff;
+
+    --trsn: .3s;
   }
 
 .custom-box{
@@ -61,7 +63,7 @@
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 40px;
-    margin-right: auto;
+    /* margin-right: auto; */
     display: flex;
     justify-content: center;
     border: 2px solid #000;
@@ -137,6 +139,11 @@
     margin-bottom: 10px;
     margin-left: auto;
 }
+#fg-colorpicker-hover{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
   .color-container{
       margin-left: auto;
       margin-right: auto;
@@ -148,4 +155,49 @@
   }
   #color-container-hover{
     border-color: var(--hovbg);
+  }
+  #fg-color-container{
+    border-color: var(--btnfg);
+  }
+  #fg-color-container-hover{
+    border-color: var(--hovfg);
+  }
+
+
+  /*structure*/
+
+  .colors{
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+  }
+  .colors-bg, .colors-fg{
+      margin-left: 10px;
+  }
+
+  .check-box{
+      display: flex;
+      justify-content: center;
+      float: left;
+      margin-right: auto;
+      margin-left: 10px;
+  }
+  #check{
+      margin-top:auto;
+      margin-bottom:auto;
+      margin-right: 5px;
+  }
+
+  #tsion{
+      margin-top:auto;
+      margin-bottom:auto;
+      height: 30px;
+      width: 50px;
+      margin-left: 10px;
+  }
+  /*addClasses*/
+
+  .transition{
+      transition: var(--trsn);
   }
