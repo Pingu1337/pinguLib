@@ -11,6 +11,8 @@
     --primary-color-alpha09:rgba(233, 160, 160,0.9);
 
     --nav-height: 100px;
+
+    --swipe-area-height: 100px;
 }
 
 *, ::after, ::before{
@@ -178,12 +180,18 @@ input {
 
 // swipe area
 .pingu-swipe-area{
-    position: relative !important;
+    position: fixed !important;
    // border: 3px solid red;
     width: 100%;
-    height: 50%;
+    height: 100px;
     top: 0;
 }
+.swipeholder{
+    position: absolute;
+    width: 100px !important;
+    height: 100px !important;
+}
+
 .pos-top {
     top: 0 !important;
 }
