@@ -6,7 +6,9 @@ safe: true
 title: pinguLib
 # email: your-email@example.com
 description: pinguLib css/js library - free library including javascripts and stylesheets
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/pinguLib" # the subpath of your site, e.g. /blog
 url: "https://pingu1337.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  pingu1337
+
+root: /pages
