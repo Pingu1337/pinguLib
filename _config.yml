@@ -12,9 +12,3 @@ url: "https://pingu1337.github.io" # the base hostname & protocol for your site,
 github_username:  pingu1337
 
 
-defaults:
-  - scope:
-      path: "pages"
-      type: "pages"
-    values:
-      permalink: /:basename/ 
