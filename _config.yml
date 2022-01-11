@@ -13,4 +13,4 @@ description: pinguLib css/js library - free library including javascripts and st
 # twitter_username: jekyllrb
 github_username:  pingu1337
 
-permalink: :title
+permalink: /:title
