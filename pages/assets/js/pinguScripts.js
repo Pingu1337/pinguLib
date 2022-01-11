@@ -19,6 +19,22 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 // |__________________________________________________________________________________________| //
+// | Loading function that loads the page and its content before displaying it to the client  | //
+
+
+document.addEventListener('DOMContentLoaded', async function() {
+    await sleep(500);
+    document.body.classList.add('skeleton-fade-out');
+    await sleep(300);
+    document.body.classList.remove('skeleton');
+    document.body.classList.remove('skeleton-fade-out');
+    document.body.classList.add('body-fade-in');
+    await sleep(300);
+    document.body.classList.remove('body-fade-in');
+ }, false);
+
+
+// |__________________________________________________________________________________________| //
 // | When the screen width is less than 600px the asynchronous function 'GetNavHeight()' gets | //
 // | called. This is done with async because the collapsed nav bar have to be loaded in order | //
 // | for the full height to be registered - default wait time is set to 100ms but if this     | //
@@ -45,11 +61,13 @@ async function GetNavHeight(){
     if(document.getElementById('pingu-nav').classList.contains('nav-collapse')){
         document.getElementById('pingu-nav').classList.add('nav-hide');
     }
-    await sleep(100);
-    var navheight = document.getElementById("pingu-nav").offsetHeight + 'px';
-    document.documentElement.style.setProperty('--nav-height', navheight);
-    console.log('init:'+navheight);
+    for(i = 0; i < 10; i++){
+        await sleep(100);
+        var navheight = document.getElementById("pingu-nav").offsetHeight + 'px';
+        document.documentElement.style.setProperty('--nav-height', navheight);
+        console.log('init:'+navheight);
     }
+}
 
 // |__________________________________________________________________________________________| //
 // | This function calculates the amount of pixels the body will get pushed down when navbar  | //
@@ -168,3 +186,39 @@ function handleTouchMove(evt) {
     xDown = null;
     yDown = null;
 };
+
+// |__________________________________________________________________________________________| //
+// |                            Development mode href evaluation                              | //
+// |__________________________________________________________________________________________| //
+
+var env = document.location.host.includes('127.0.0.1:');
+
+if (env){console.log('%c Development Environment: ' + '%c'+env, 'color: #c02ff5', 'color:#00d62b');};
+
+if(env){
+    var nav = document.getElementById('pingu-nav').childNodes;
+    if(document.location.pathname.includes('/pages/')){
+        nav.forEach(c => {
+            if (c.href){
+                if(!c.href.includes('github.com')){
+                    if(!c.href.includes('.html')){
+                        c.href = c.pathname + '.html';
+                        console.log(c.href);
+                    };
+                };
+            };
+        });
+    } else{
+            nav.forEach(c => {
+                if (c.href){
+                    if(!c.href.includes('github.com')){
+                        if(!c.href.includes('.html')){
+                            c.href = 'pages' + c.pathname+ '.html';
+                            console.log(c.href);
+                        };
+                    };
+                };
+            });
+        };
+};
+

@@ -1,60 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <base href="/pinguLib/">
     <title>pinguLib</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" type="text/css" href="/css/pinguStyles.css">
-    <link rel="stylesheet" type="text/css" href="css/pinguStyles.css">
-    <link rel="stylesheet" type="text/css" href="/styles.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="pages/assets/css/pinguStyles.css">
+    <link rel="stylesheet" type="text/css" href="pages/assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="pages/assets/css/wip/wip.css">
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-markup.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.js"></script>
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/4be8e8f122.js" crossorigin="anonymous"></script>
     
-    <script src="/js/prism.js"></script>
-    <script src="js/prism.js"></script>
-    <script src="/js/clipboard.js"></script>
-    <script src="js/clipboard.js"></script>
-    <script src="/js/pinguScripts.js"></script>
-    <script src="js/pinguScripts.js"></script>
+
+    <script src="pages/assets/js/prism.js"></script>
+
+    <script src="pages/assets/js/clipboard.js"></script>
+
 
 </head>
 
-<body>
-    <div class="main">
+<body class="skeleton">
 
-        <!-- <ul style="list-style: none; display: flex;">
-            <li><a class="test-nav" href="/index.html">Home</a></li>
-            <li><a class="test-nav" href="/pinguLib/components.html">Components</a></li>
-            <li><a class="test-nav" href="/install.html">Install</a></li>
-            <li><a class="test-nav" href="/test.html">TestFile</a></li>
-        </ul> -->
-
-        <div class="nav">
-            <a class="active" href="/pinguLib/index.html">Home</a>
-            <a href="/pinguLib/custom">Customize</a>
-            <a href="/pinguLib/components">Components</a>
-            <a href="/pinguLib/install">Install</a>
-            <a class="icon" href="https://github.com/Pingu1337/pinguLib" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-        </div>
+    <div class="pingu-swipe-area"></div>
+        <div class="main">
+            <div class="pingu-swipe-area">
+                <div class="nav nav-collapse" id="pingu-nav">
+                    <a class="active" href="index.html">Home</a>
+                    <a href="custom">Customize</a>
+                    <a href="components">Components</a>
+                    <a href="install">Install</a>
+                    <a class="icon" href="https://github.com/Pingu1337/pinguLib" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                </div>
+            </div>  
+            
+            <div class="nav-toggle" id="navtoggle">
+                <a class="nav-toggle-btn" id="navtoggler"><i class="fas fa-bars fa-2x"></i></a>
+            </div>
 
         <div class="container">
             <div class="textbox">
                <h1 style="margin-top: 2px;">pinguLib</h1>
-               <p>pinguLib is a free css/js library including components like <a class="text-link" href="/pinguLib/components"><button class="pingu-btn color-pink" style="margin:0;">this button</button></a><br>
-                    or why not <a class="text-link" href="/pinguLib/components"><button class="pingu-btn color-white" style="margin:0;">this button</button></a> ? <br> <br>View all components included in the library <a class="text-link" href="/pinguLib/components">here</a> </p>
+               <p>pinguLib is a free css/js library including components like <a class="text-link" href="components"><button class="pingu-btn color-pink" style="margin:0;">this button</button></a><br>
+                    or why not <a class="text-link" href="components"><button class="pingu-btn color-white" style="margin:0;">this button</button></a> ? <br> <br>View all components included in the library <a class="text-link" href="/pinguLib/components">here</a> </p>
                     
                     <p>
                         
                     <br> <br>
                     <br> <br>
-                    Follow the <a class="text-link" href="/pinguLib/install">installation guide</a> to get started.
+                    Follow the <a class="text-link" href="install">installation guide</a> to get started.
                 </p>
                 
             </div>
@@ -66,6 +61,8 @@
 
     </div>
     
+    <!--Import the JavaScript at the bottom of the body-->
+    <script src="pages/assets/js/pinguScripts.js"></script>
 </body>
 
     
