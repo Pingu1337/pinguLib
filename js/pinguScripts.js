@@ -154,7 +154,7 @@ function handleTouchMove(evt) {
             SwipeUpNav();
             console.log('up swide detected! - yDiff:' + yDiff)
         } else {
-            if(yDiff <= -7){
+            if(yDiff <= -10){
                 SwipeDownNav();
             }
             console.log('down swide detected! - yDiff:' + yDiff)
