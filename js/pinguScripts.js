@@ -62,7 +62,9 @@ document.getElementById("navtoggler").addEventListener('click', async function()
     document.body.classList.toggle('pushed');
     document.getElementById('pingu-nav').classList.toggle('nav-collapse');
     document.getElementById('pingu-nav').classList.toggle('nav-show');
-    document.getElementById('pingu-nav').classList.remove('nav-hide');    
+    document.getElementById('pingu-nav').classList.remove('nav-hide');
+    //adding animation to nav-toggle
+    document.getElementById('navtoggle').classList.toggle('nav-toggle-open');
     // hiding overflow-Y to prevent flickering when nav goes back up 
     if(document.getElementById('pingu-nav').classList.contains('nav-show')){
         document.body.style.overflowY = 'hidden';
@@ -86,6 +88,8 @@ async function SwipeDownNav(){
     document.getElementById('pingu-nav').classList.remove('nav-collapse');
     document.getElementById('pingu-nav').classList.add('nav-show');
     document.getElementById('pingu-nav').classList.remove('nav-hide');
+    //adding animation to nav-toggle
+    document.getElementById('navtoggle').classList.add('nav-toggle-open');
     // hiding overflow-Y to prevent flickering when nav goes back up 
     document.body.style.overflowY = 'hidden';
 }
@@ -102,6 +106,8 @@ async function SwipeUpNav(){
     // removing the pushed class
     document.body.classList.remove('pushed');
     document.getElementById('pingu-nav').classList.add('nav-collapse');
+    //removing animation from nav-toggle
+    document.getElementById('navtoggle').classList.remove('nav-toggle-open');
     await sleep(100);
     // waiting for nav to start going up and then re enabling overflow-Y 
     document.body.style.overflowY = 'auto';
@@ -144,20 +150,18 @@ function handleTouchMove(evt) {
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
         if (xDiff > 0 ) {
             /* left swipe */
-            console.log('swiped left!')
         } else {
             /* right swipe */
-            console.log('swiped right!')
         }
     } else{
         if ( yDiff > 0 ) {
+            /*up swipe*/
             SwipeUpNav();
-            console.log('up swide detected! - yDiff:' + yDiff)
         } else {
-            if(yDiff <= -10){
+            if(yDiff < 0){
+                /*down swipe*/
                 SwipeDownNav();
             }
-            console.log('down swide detected! - yDiff:' + yDiff)
         }
     }
 
