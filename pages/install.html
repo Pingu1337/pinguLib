@@ -13,12 +13,11 @@ title: install
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <link rel="stylesheet" type="text/css" href="assets/css/wip/wip.css">
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-tomorrow.min.css">
+
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/4be8e8f122.js" crossorigin="anonymous"></script>
-    
-    <script src="assets/js/prism.js"></script>
+
     <script src="assets/js/clipboard.js"></script>
 
 
@@ -38,16 +37,18 @@ title: install
                 </div>
             </div>  
             
-            <div class="nav-toggle" id="navtoggle">
-                <a class="nav-toggle-btn" id="navtoggler"><i class="fas fa-bars fa-2x"></i></a>
+            <div class="pingu-swipe-area toggle-swipe">
+                <div class="nav-toggle" id="navtoggle">
+                    <a class="nav-toggle-btn" id="navtoggler"><i class="fas fa-bars fa-2x"></i></a>
+                </div>
             </div>
 
         <div class="container">
             <div class="textbox">
                 <p>
                     To use the css file include the following between the <span style="color: rgb(24, 71, 228);">&lt;head&gt;</span> tags: <br/>
-                    <input style="display: none;" type="text" value="&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://pingu1337.github.io/pinguLib/css/pinguStyles.css&quot;&gt;" id="pingu-clip">
-                    <div class='make-snippet' style="display: none;">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://pingu1337.github.io/pinguLib/css/pinguStyles.css&quot;&gt;</div>
+                    <pre class="code-snippet"><code class="lang-Markup">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://pingu1337.github.io/pinguLib/pages/assets/css/pinguStyles.css&quot;&gt;</code></pre>
+                    <input style="display: none;" type="text" value="&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://pingu1337.github.io/pinguLib/pages/assets/css/pinguStyles.css&quot;&gt;" id="pingu-clip">
                     <div style="text-align: right;"><button class="pingu-btn color-pink copy-btn1" id="copy-btn"  onclick="CopyClipboard(1)">Copy To Clipboard</button></div>
                 </p>
                 <br/>
@@ -55,8 +56,8 @@ title: install
                 <p>
                     <br>
                     To use the Javascript file include the following between the <span style="color: rgb(24, 71, 228);">&lt;head&gt;</span> tags: <br/>
-                    <input style="display: none;" type="text" value="&lt;script src=&quot;https://pingu1337.github.io/pinguLib/js/pinguScripts.js&quot;&gt;&lt;/script&gt;" id="pingu-clip-1">
-                    <div class='make-snippet' style="display: none;">&lt;script src=&quot;https://pingu1337.github.io/pinguLib/js/pinguScripts.js&quot;&gt;&lt;/script&gt;</div>
+                    <input style="display: none;" type="text" value="&lt;script src=&quot;https://pingu1337.github.io/pinguLib/pages/assets/js/pinguScripts.js&quot;&gt;&lt;/script&gt;" id="pingu-clip-1">
+                    <pre class="code-snippet"><code class="lang-Markup">&lt;script src=&quot;https://pingu1337.github.io/pinguLib/pages/assets/js/pinguScripts.js&quot;&gt;&lt;/script&gt;</code></pre>
                     <div style="text-align: right;"><button class="pingu-btn color-pink copy-btn2" id="copy-btn" onclick="CopyClipboard(2)">Copy To Clipboard</button></div>
                 </p>
             </div>
@@ -69,6 +70,9 @@ title: install
     </div>
     <!--Import the JavaScript at the bottom of the body-->
     <script src="assets/js/pinguScripts.js"></script>  
+    <!--Prism JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 
     

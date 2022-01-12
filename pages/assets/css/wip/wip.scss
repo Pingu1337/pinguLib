@@ -114,6 +114,28 @@ input {
      color: #a3aaaf;
  }
 
+.pingu-check-input{
+    appearance: none;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    vertical-align: top;
+    box-shadow: inset -1px 1px 1px 0px rgba(0,0,0,.2);
+    border-bottom: 1px solid rgba(255,255,255,.4);
+    border-left: 1px solid rgba(255,255,255,.4);
+    border-right: 1px solid rgba(0,0,0,0);
+    border-top: 1px solid rgba(0,0,0,0);
+    border-radius: 0.25rem;
+    height: 1.1em;
+    width: 1.1em;
+    margin-left: 0;
+}
+.pingu-check-input:checked{
+    background-color: #e9a0a0;
+    border: 1px solid rgba(0,0,0,0);
+}
+ 
 // pingu container
 .pingu-container{
     display: block;
@@ -244,6 +266,25 @@ input {
     }
 }
 
+
+// paddings
+
+.pt-1{
+    padding-top: 1em;
+}
+.pt-2{
+    padding-top: 2em;
+}
+.pt-3{
+    padding-top: 3em;
+}
+.pt-4{
+    padding-top: 4em;
+}
+.pt-5{
+    padding-top: 5em;
+}
+
  // media querys
 
  // | only on screens whith more than 768px width | //
@@ -290,7 +331,7 @@ input {
         width: 100%;
         flex-direction: column-reverse;
         transition: transform 0.5s, box-shadow 0.5s;
-        background-color: var(--primary-color-alpha03);
+        background-color: var(--primary-color-a3-hex);
         border-bottom: 1px solid rgba(255,255,255,0);
         padding-top: 1rem;
         margin: 0;
@@ -319,10 +360,18 @@ input {
     // swipe area
     .pingu-swipe-area{
     display: initial;
-    position: fixed !important;
+    position: absolute !important;
     width: 100%;
     height: var(--swipe-area-height);
     top: 0;
+    left: 0;
+    }
+    .toggle-swipe{
+        position: fixed !important;
+        right: 0;
+        left: auto;
+        width: 80px;
+        height: 75px;
     }
     .main{
         padding-top: calc(var(--swipe-area-height) / 2);
@@ -340,6 +389,12 @@ input {
     .pos-bottom{
         bottom: 0 !important;
     }
+}
+
+//prism code snippet styles
+.code-snippet{
+    border-radius: 45px;
+    padding: 1.4em;
 }
 
 

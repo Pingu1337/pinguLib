@@ -14,15 +14,13 @@ title: components
     <link rel="stylesheet" type="text/css" href="assets/css/wip/wip.css">
     <link rel="stylesheet" type="text/css" href="assets/css/pinguStyles.css">
 
-    
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-tomorrow.min.css">
+
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/4be8e8f122.js" crossorigin="anonymous"></script>
     
 
-     <script src="assets/js/prism.js"></script>
     <script src="assets/js/clipboard.js"></script>
     <script src="assets/js/toggleshow.js"></script>
 </head>
@@ -41,8 +39,10 @@ title: components
                 </div>
             </div>  
             
-            <div class="nav-toggle" id="navtoggle">
-                <a class="nav-toggle-btn" id="navtoggler"><i class="fas fa-bars fa-2x"></i></a>
+            <div class="pingu-swipe-area toggle-swipe">
+                <div class="nav-toggle" id="navtoggle">
+                    <a class="nav-toggle-btn" id="navtoggler"><i class="fas fa-bars fa-2x"></i></a>
+                </div>
             </div>
         
 
@@ -52,10 +52,10 @@ title: components
                 <div class="btn-box">  
                     <h1 style="text-align: center;">Buttons</h1>
                     <div class="b1 toggle-show" id="b1">
-                        <div class='make-snippet'><button class="pingu-btn color-pink">pingu-btn</button></div>
+                        <pre class="code-snippet"><code class="language-Markup"> &lt;button class="pingu-btn color-pink">pinguLib&lt;/button></code></pre>
                     </div>                    
                     <div class="b2" id="b2">
-                        <div class='make-snippet'><button class="pingu-btn color-white">pingu-btn</button></div>
+                        <pre class="code-snippet"><code class="language-Markup"> &lt;button class="pingu-btn color-white">pinguLib&lt;/button></code></pre>
                     </div>
                     <button class="pingu-btn color-pink" onclick="ToggleShow(1)">pingu-btn</button>  
                     <button class="pingu-btn color-white" onclick="ToggleShow(2)">pingu-btn</button>  
@@ -87,15 +87,15 @@ title: components
 <div class='make-snippet'><form class="pingu-form txt-l">
     <div class="pingu-piece">
         <label for="exampleinput" class="pingu-form-label">Email address</label>
-        <input type="email" class="pingu-form-ctrl" id="exampleinput" placeholder="pinguLib@gmail.com" aria-describedby="emailHelp">
+        <input type="email" class="pingu-form-ctrl" id="emailexample" placeholder="pinguLib@gmail.com" aria-describedby="emailHelp">
         <div id="emailHelp" class="pingu-form-text">We'll never share your email with anyone else.</div>
     </div>
     <div class="pingu-piece">
         <label for="examplePassword" class="pingu-form-label">Password</label>
-        <input type="password" class="pingu-form-ctrl" id="examplePassword">
+        <input type="password" class="pingu-form-ctrl" id="Passwordexample">
     </div>
     <div class="pingu-piece-check">
-        <input type="checkbox" class="pingu-form-check-input" id="exampleCheck">
+        <input type="checkbox" class="pingu-form-check-input" id="Checkexample">
         <label for="exampleCheck" class="pingu-form-check-label">Member me</label>
     </div>
     <button type="submit" class="pingu-btn color-pink">Submit</button>
@@ -110,6 +110,10 @@ title: components
 
     <!--Import the JavaScript at the bottom of the body-->
     <script src="assets/js/pinguScripts.js"></script>
+    <!--Prism JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
 </body>
 
     

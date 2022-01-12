@@ -15,12 +15,11 @@ title: custom
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     <link rel="stylesheet" type="text/css" href="assets/css/wip/wip.css">
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-tomorrow.min.css">
+
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/4be8e8f122.js" crossorigin="anonymous"></script>
-    
-    <script src="assets/js/prism.js"></script>
+
     <script src="assets/js/clipboard.js"></script>
 
 
@@ -39,9 +38,11 @@ title: custom
                     <a class="icon" href="https://github.com/Pingu1337/pinguLib" target="_blank"><i class="fab fa-github fa-2x"></i></a>
                 </div>
             </div>  
-            
-            <div class="nav-toggle" id="navtoggle">
-                <a class="nav-toggle-btn" id="navtoggler"><i class="fas fa-bars fa-2x"></i></a>
+
+            <div class="pingu-swipe-area toggle-swipe">
+                <div class="nav-toggle" id="navtoggle">
+                    <a class="nav-toggle-btn" id="navtoggler"><i class="fas fa-bars fa-2x"></i></a>
+                </div>
             </div>
 
         <div class="container">
@@ -49,7 +50,7 @@ title: custom
                <h1 style="margin-top: 2px;">Customize your own button</h1>
 
                 <div class="custom-box">
-                    <div class="flex-row">
+                    <div class="flex-">
                     <div id="sliders">
                         <!--Height-->
                         <div class="slidecontainer">
@@ -74,22 +75,29 @@ title: custom
                                 <input type="range" min="0" max="50" value="25" class="slider" id="border-radius">
                             </div>
                         </div>
-                    </div>
-
-
-                    <div class="custom-btn-box">
-                        <div class="inner-btn-box">
-                            <button class="pingu-btn-custom-btn" id="custom-btn">Customize Me</button>
+                        <div class="pingu-piece-check pt-1">
+                            <input type="checkbox" class="pingu-check-input" id="transitioncheck" checked>
+                            <label for="transitioncheck" class="pingu-check-label">hover transition</label>
                         </div>
                     </div>
+                    <p>Click the button to generate the code when you are done!</p>
+                    <!-- The Modal -->
+                        <div id="CodeModal" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class='make-snippet'></div>
+                            </div>
+                        </div>
 
-                    <div class="check-box">
-                        <input type="checkbox" id="check">
-                        <p for="check"> transition</p>
-                        <input type="text" id="tsion">
-                        <p for="tsion"> s</p>
-
+                        <hr>
+                        
+                    <div class="custom-btn-box">                       
+                        <div class="inner-btn-box">
+                            <button class="pingu-btn-custom-btn transition" id="custom-btn" onclick="GetCode()">Customize Me</button>
+                        </div>                        
                     </div>
+                        <hr>
             </div>
 
                 <!--Color Picker-->
@@ -144,6 +152,9 @@ title: custom
     </div>
     <!--Import the JavaScript at the bottom of the body-->
     <script src="assets/js/pinguScripts.js"></script>
+    <!--Prism JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 
     
