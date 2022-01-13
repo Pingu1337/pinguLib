@@ -195,8 +195,6 @@ var slider = document.querySelectorAll('.pingu-slider').forEach(s => {
     s.style.background = 'linear-gradient(to right, #e9a0a0 0%, #e9a0a0 ' + value + '%, #fce0e0 ' + value + '%, #fce0e0 100%)';
     // Slider Label Value
     if(s.previousElementSibling.nodeName == 'LABEL'){
-        console.log(s.previousElementSibling.nodeName);
-        console.log(s.previousElementSibling.childNodes[1].id)
         if(s.previousElementSibling.childNodes[1].id == 'pingu-slider-value'){
             s.previousElementSibling.childNodes[1].innerHTML = s.value;
         };
