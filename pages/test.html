@@ -1,52 +1,62 @@
+---
+title: forms
+---
 <!DOCTYPE html>
 <html>
 <head>
-    <base href="/pinguLib/">
-    <title>pinguLib</title> 
+
+    <title>forms</title> 
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet"  type="text/css" href="/styles.css">
-    <link rel="stylesheet"  type="text/css" href="styles.css">
-    <link rel="stylesheet"  type="text/css" href="https://pingu1337.github.io/pinguLib/css/pinguStyles.css">
-    <script src="https://pingu1337.github.io/pinguLib/js/pinguScripts.js"></script>
+    <!--website specific stylesheet-->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <!--pinguLib stylesheet-->
+    <link rel="stylesheet" type="text/css" href="assets/css/pinguLib.css">
+    
 
+        <!--FontAwesome-->
+        <script src="https://kit.fontawesome.com/4be8e8f122.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <div class="main">
+<body class="skeleton">
 
-        <ul style="list-style: none; display: flex;">
-            <li><a class="test-nav" href="/index.html">Home</a></li>
-            <li><a class="test-nav" href="/pinguLib/components.html">Components</a></li>
-            <li><a class="test-nav" href="/install.html">Install</a></li>
-            <li><a class="test-nav" href="/test.html">TestFile</a></li>
-        </ul>
+    <div class="pingu-swipe-area"></div>
+        <div class="main">
+            <div class="pingu-swipe-area">
+                <div class="nav nav-collapse" id="pingu-nav">
+                    <a class="active" href="index.html">Home</a>
+                    <a href="custom">Customize</a>
+                    <a href="components">Components</a>
+                    <a href="install">Install</a>
+                    <a class="icon" href="https://github.com/Pingu1337/pinguLib" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                </div>
+            </div>  
+            
+            <div class="pingu-swipe-area toggle-swipe">
+                <div class="nav-toggle" id="navtoggle">
+                    <a class="nav-toggle-btn" id="navtoggler"><i class="fas fa-bars fa-2x"></i></a>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="textbox" style="background-color: #fff;">
+                    <div class="pingu-container x-center y-center w-300 h-md ">
 
-        <div class="nav">
-            <a href="/pinguLib/index.html">Home</a>
-            <a href="/pinguLib/custom">Customize</a>
-            <a href="/pinguLib/components">Components</a>
-            <a href="/pinguLib/install">Install</a>
-        </div>
+                        <div class="pingu-slidercontainer">
+                            <div class="sliderlabel">
+                                <label for="example-slider">pingu-slider: <span id="example-slider-value"></span></label>
+                                <input type="range" min="0" max="100" value="25" class="pingu-slider" id="example-slider">
+                            </div>
+                        </div>
 
-        <div class="container">
-            <svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+                    </div>
+                </div>
+            </div>
 
-                <g>
-                 <title>Layer 1</title>
-                 <rect stroke="null" rx="100" id="svg_7" height="184.07693" width="454.00002" y="76.92309" x="69" fill="#e5e5e5"/>
-                 <rect rx="13" stroke="null" id="svg_9" height="32.3077" width="1634" y="314.6154" x="69" fill="#e5e5e5"/>
-                 <rect rx="13" stroke="null" id="svg_11" height="32.3077" width="1449" y="390.38462" x="69" fill="#e5e5e5"/>
-                 <rect rx="13" stroke="null" id="svg_12" height="32.3077" width="835" y="462.69231" x="69" fill="#e5e5e5"/>
-                 <rect rx="13" stroke="null" id="svg_14" height="32.3077" width="449" y="195.92299" x="573.61547" fill="#e5e5e5"/>
-                 <rect rx="13" stroke="null" id="svg_16" height="32.3077" width="680" y="112.30763" x="573.61547" fill="#e5e5e5"/>
-                </g>
-               </svg>
-        </div>
-
-    </div>
-    
+        </div>    
+    <!--Import the JavaScript at the bottom of the body-->
+    <script src="assets/js/pinguScripts.js"></script>
 </body>
 
 </html>

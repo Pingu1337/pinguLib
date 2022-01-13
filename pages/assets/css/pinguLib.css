@@ -357,6 +357,26 @@ body {
   padding-top: 5em;
 }
 
+.mt-1 {
+  margin-top: 1em;
+}
+
+.mt-2 {
+  margin-top: 2em;
+}
+
+.mt-3 {
+  margin-top: 3em;
+}
+
+.mt-4 {
+  margin-top: 4em;
+}
+
+.mt-5 {
+  margin-top: 5em;
+}
+
 .nav-toggle {
   display: none;
   position: fixed;
@@ -439,6 +459,75 @@ body {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }
+}
+
+.pingu-slidercontainer {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pingu-slidecontainer label {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.05rem;
+  width: 100%;
+}
+
+.pingu-sliderlabel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: 0px solid red;
+}
+
+.pingu-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#e9a0a0), color-stop(50%, #e9a0a0), color-stop(50%, #fce0e0), to(#fce0e0));
+  background: linear-gradient(to right, #e9a0a0 0%, #e9a0a0 50%, #fce0e0 50%, #fce0e0 100%);
+  outline: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-box-shadow: inset -1px 1px 1px 0.5px rgba(0, 0, 0, 0.1);
+          box-shadow: inset -1px 1px 1px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+.pingu-slider:active {
+  outline: none;
+}
+
+.pingu-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #e9a0a0;
+  cursor: pointer;
+  -webkit-box-shadow: -2px 0px 3px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: -2px 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.pingu-slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #e9a0a0;
+  cursor: pointer;
+  box-shadow: -2px 0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (min-width: 768px) {

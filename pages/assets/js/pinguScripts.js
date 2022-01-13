@@ -186,6 +186,35 @@ function handleTouchMove(evt) {
     xDown = null;
     yDown = null;
 };
+// |__________________________________________________________________________________________| //
+// |                               Slider Gradient section                                    | //
+// |__________________________________________________________________________________________| //
+
+var slider = document.querySelectorAll('.pingu-slider').forEach(s => {
+    var value = (s.value-s.min)/(s.max-s.min)*100
+    s.style.background = 'linear-gradient(to right, #e9a0a0 0%, #e9a0a0 ' + value + '%, #fce0e0 ' + value + '%, #fce0e0 100%)';
+    // Slider Label Value
+    if(s.previousElementSibling.nodeName == 'LABEL'){
+        console.log(s.previousElementSibling.nodeName);
+        console.log(s.previousElementSibling.childNodes[1].id)
+        if(s.previousElementSibling.childNodes[1].id == 'pingu-slider-value'){
+            s.previousElementSibling.childNodes[1].innerHTML = s.value;
+        };
+    };
+    s.addEventListener('input', UpdateSlider);
+});
+
+// Function to update slider gradient dynamically
+function UpdateSlider() {
+    var value = (this.value-this.min)/(this.max-this.min)*100
+    this.style.background = 'linear-gradient(to right, #e9a0a0 0%, #e9a0a0 ' + value + '%, #fce0e0 ' + value + '%, #fce0e0 100%)';
+    // Update Slider Label Value
+    if(this.previousElementSibling.nodeName == 'LABEL'){
+        if(this.previousElementSibling.childNodes[1].id == 'pingu-slider-value'){
+            this.previousElementSibling.childNodes[1].innerHTML = this.value;
+        };
+    };
+};
 
 // |__________________________________________________________________________________________| //
 // |                            Development mode href evaluation                              | //
