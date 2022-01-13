@@ -64,9 +64,15 @@ var colourPicker = document.getElementById("colorpicker");
 var colorContainer = document.getElementById("color-container")
 var ColorOutput = document.getElementById("color-picker-value");
 colorContainer.style.setProperty("--btnbg", colourPicker.value);
-ColorOutput.innerHTML =colourPicker.value
+ColorOutput.value =colourPicker.value
 colourPicker.oninput = function(){
-  ColorOutput.innerHTML = this.value;
+  ColorOutput.value = this.value;
+  colorContainer.style.setProperty("--btnbg", this.value);
+  btn.style.setProperty("--btnbg", this.value);
+  bgCol = this.value;
+}
+ColorOutput.oninput = function(){
+  colourPicker.value = this.value;
   colorContainer.style.setProperty("--btnbg", this.value);
   btn.style.setProperty("--btnbg", this.value);
   bgCol = this.value;
@@ -77,9 +83,15 @@ var HcolourPicker = document.getElementById("colorpicker-hover");
 var HcolorContainer = document.getElementById("color-container-hover")
 var HColorOutput = document.getElementById("colorpicker-hover-value");
 HcolorContainer.style.setProperty("--hovbg", colourPicker.value);
-HColorOutput.innerHTML = HcolourPicker.value
+HColorOutput.value = HcolourPicker.value
 HcolourPicker.oninput = function(){
-  HColorOutput.innerHTML = this.value;
+  HColorOutput.value = this.value;
+  HcolorContainer.style.setProperty("--hovbg", this.value);
+  btn.style.setProperty("--hovbg", this.value);
+  bgHov = this.value;
+}
+HColorOutput.oninput = function() {
+  HcolourPicker.value = this.value;
   HcolorContainer.style.setProperty("--hovbg", this.value);
   btn.style.setProperty("--hovbg", this.value);
   bgHov = this.value;
@@ -89,9 +101,15 @@ var fgcolourPicker = document.getElementById("fg-colorpicker");
 var fgcolorContainer = document.getElementById("fg-color-container")
 var fgColorOutput = document.getElementById("fg-colorpicker-value");
 fgcolorContainer.style.setProperty("--btnfg", fgcolourPicker.value);
-fgColorOutput.innerHTML = fgcolourPicker.value
+fgColorOutput.value = fgcolourPicker.value
 fgcolourPicker.oninput = function(){
-  fgColorOutput.innerHTML = this.value;
+  fgColorOutput.value = this.value;
+  fgcolorContainer.style.setProperty("--btnfg", this.value);
+  btn.style.setProperty("--btnfg", this.value);
+  fgCol = this.value;
+}
+fgColorOutput.oninput = function(){
+  fgcolourPicker.value = this.value;
   fgcolorContainer.style.setProperty("--btnfg", this.value);
   btn.style.setProperty("--btnfg", this.value);
   fgCol = this.value;
@@ -101,9 +119,15 @@ var HfgcolourPicker = document.getElementById("fg-colorpicker-hover");
 var HfgcolorContainer = document.getElementById("fg-color-container-hover")
 var HfgColorOutput = document.getElementById("fg-colorpicker-value-hover");
 HfgcolorContainer.style.setProperty("--hovfg", HfgcolourPicker.value);
-HfgColorOutput.innerHTML = HfgcolourPicker.value
+HfgColorOutput.value = HfgcolourPicker.value
 HfgcolourPicker.oninput = function(){
-  HfgColorOutput.innerHTML = this.value;
+  HfgColorOutput.value = this.value;
+  HfgcolorContainer.style.setProperty("--hovfg", this.value);
+  btn.style.setProperty("--hovfg", this.value);
+  fgHov = this.value;
+}
+HfgColorOutput.oninput = function(){
+  HfgcolourPicker.value = this.value;
   HfgcolorContainer.style.setProperty("--hovfg", this.value);
   btn.style.setProperty("--hovfg", this.value);
   fgHov = this.value;
@@ -129,11 +153,6 @@ document.getElementById('transitioncheck').addEventListener('change', function()
 
 var modal = document.getElementById("CodeModal");
 var modalText = document.getElementById("modalText");
-var span = document.getElementsByClassName("close")[0];
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
 
 window.onclick = function(event) {
   if (event.target == modal) {
@@ -149,7 +168,8 @@ async function GetCode(){
     var transitionCss = ""
   }
 
-var btnCss = `
+var btnCss = `&lt;button class="pingu-custom-btn">pingu button&lt;/button>
+&lt;style>
 .pingu-custom-btn{ 
   font-family: Helvetica, sans-serif; 
   font-size: 1.05rem;
@@ -160,7 +180,6 @@ var btnCss = `
   color: ${fgCol};
   background:${bgCol}; 
   cursor: pointer; 
-  -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
   ${transitionCss}
 }
 .pingu-custom-btn:active{
@@ -172,13 +191,18 @@ var btnCss = `
 .pingu-custom-btn:hover{
   color: ${fgHov};
   background:${bgHov}; 
-}`
+}
+&lt;/style>`
+
+var block = document.getElementById('cssExport');
 
 modal.style.display = "block";
-modal.innerHTML = `<div class="modal-content">
-<span class="close">&times;</span>
-<pre><code class="language-css">${btnCss}</code></pre>
-</div>`;
+document.getElementById('cssExport').innerHTML = btnCss;
 
+Prism.highlightElement(block);
+
+var toPrint = btnCss.replaceAll('&lt;', '<');
+
+document.getElementById('css-clip').value = toPrint;
   console.log(btnCss);
 }

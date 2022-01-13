@@ -64,7 +64,7 @@ async function GetNavHeight(){
     for(i = 0; i < 10; i++){
         await sleep(100);
         var navheight = document.getElementById("pingu-nav").offsetHeight + 'px';
-        document.documentElement.style.setProperty('--nav-height', navheight);
+        document.documentElement.style.setProperty('--pl-nav-height', navheight);
         console.log('init:'+navheight);
     }
 }
@@ -75,7 +75,7 @@ async function GetNavHeight(){
 // | the navbar.                                                                              | //
 document.getElementById("navtoggler").addEventListener('click', async function(){   
     var navheight = document.getElementById("pingu-nav").offsetHeight + 'px';
-    document.documentElement.style.setProperty('--nav-height', navheight);
+    document.documentElement.style.setProperty('--pl-nav-height', navheight);
     console.log(navheight);
     document.body.classList.toggle('pushed');
     document.getElementById('pingu-nav').classList.toggle('nav-collapse');
@@ -98,7 +98,7 @@ document.getElementById("navtoggler").addEventListener('click', async function()
 async function SwipeDownNav(){
     // calculating the amount of pixels content will be pushed
     var navheight = document.getElementById("pingu-nav").offsetHeight + 'px';
-    document.documentElement.style.setProperty('--nav-height', navheight);
+    document.documentElement.style.setProperty('--pl-nav-height', navheight);
     // adding the pushed class
     document.body.classList.add('pushed');
     // adding the 'nav-show' class

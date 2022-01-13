@@ -11,6 +11,11 @@ async function CopyClipboard(x) {
         var copyText = document.getElementById("pingu-clip-1");
         var copyButton = document.querySelector(".copy-btn2");
     }
+    if(x==3){
+      var copyText = document.getElementById("css-clip");
+      var copyButton = document.querySelector(".copy-btn-css");
+    }
+
     copyText.select();
     copyText.setSelectionRange(0, 99999); /* For mobile devices */
     navigator.clipboard.writeText(copyText.value);

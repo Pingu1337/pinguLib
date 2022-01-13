@@ -5,6 +5,11 @@ html, body {
     width: auto;
 }
 
+.code-snippet {
+    border-radius: 45px;
+    padding: 1.4em;
+  }
+
 .nav{
     display: flex;
     justify-content: center;
@@ -142,7 +147,7 @@ footer{
     height: 165px;
     text-align: center;
     padding-top: 25px;
-    background-color: #ebebeb;
+    background-color: #f3f1f1;
     border-radius: 0px;
         width: 100vw;
         height: 100px;

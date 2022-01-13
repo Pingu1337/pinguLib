@@ -8,21 +8,17 @@ title: custom
     <title>custom</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <link rel="stylesheet" type="text/css" href="assets/css/pinguStyles.css">
+    <!--website specific stylesheet-->
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/wip/wip.css">
-
+    <!--pinguLib stylesheet-->
+    <link rel="stylesheet" type="text/css" href="assets/css/pinguLib.css">
+    <!--Prism Theme-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism-tomorrow.min.css">
-
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/4be8e8f122.js" crossorigin="anonymous"></script>
-
+    <!--website specific JavaScript-->
     <script src="assets/js/clipboard.js"></script>
-
-
 </head>
 
 <body class="skeleton">
@@ -84,15 +80,15 @@ title: custom
                     <!-- The Modal -->
                         <div id="CodeModal" class="modal">
                             <!-- Modal content -->
-                            <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <div class='make-snippet'></div>
+                            <div class="modal-content">   
+                            <pre class="code-export"><code class="lang-Markup" id="cssExport"></code></pre>
+                            <textarea style="display: none;" type="text" id="css-clip" value="test"></textarea>
+                            <button class="pingu-btn color-pink copy-btn-css" id="copy-btn-css" onclick="CopyClipboard(3)">Copy To Clipboard</button>
                             </div>
                         </div>
 
                         <hr>
-                        
-                    <div class="custom-btn-box">                       
+                    <div class="custom-btn-box">                      
                         <div class="inner-btn-box">
                             <button class="pingu-btn-custom-btn transition" id="custom-btn" onclick="GetCode()">Customize Me</button>
                         </div>                        
@@ -108,14 +104,14 @@ title: custom
                             <div class="slidecontainer color-container" id="color-container" style="display: flex; flex-direction: column; justify-content: center;">
                                 <label for="colorpicker">Background color</label>
                                 <div class="sliderlabel"style="flex-direction: row; justify-content: center; align-items: center; margin-left: auto; margin-right: auto;">
-                                    <input type="color" value="#e9a0a0" id="colorpicker"> <label style="margin-left: 10px; margin-right: auto; min-width: 100px;"><span id="color-picker-value"></span></label>
+                                    <input type="color" value="#e9a0a0" id="colorpicker"><input type="text" id="color-picker-value" value="#e9a0a0">
                                 </div>
                             </div>
                             <!--Background:hover-->
                             <div class="slidecontainer color-container" id="color-container-hover" style="display: flex; flex-direction: column; justify-content: center;">
-                                <label for="colorpicker">Background color on hover</label>
+                                <label for="colorpicker">Background hover color</label>
                                 <div class="sliderlabel"style="flex-direction: row; justify-content: center; align-items: center; margin-left: auto; margin-right: auto;">
-                                    <input type="color" value="#e9a0a0" id="colorpicker-hover"> <label style="margin-left: 10px; margin-right: auto; min-width: 100px;"><span id="colorpicker-hover-value"></span></label>
+                                    <input type="color" value="#d89292" id="colorpicker-hover"><input type="text" id="colorpicker-hover-value" value="#e9a0a0">
                                 </div>
                             </div>
                         </div>
@@ -125,14 +121,14 @@ title: custom
                             <div class="slidecontainer color-container" id="fg-color-container" style="display: flex; flex-direction: column; justify-content: center;">
                                 <label for="fg-colorpicker">Foreground color</label>
                                 <div class="sliderlabel"style="flex-direction: row; justify-content: center; align-items: center; margin-left: auto; margin-right: auto;">
-                                    <input type="color" value="#e9a0a0" id="fg-colorpicker"> <label style="margin-left: 10px; margin-right: auto; min-width: 100px;"><span id="fg-colorpicker-value"></span></label>
+                                    <input type="color" value="#ffffff" id="fg-colorpicker"><input type="text" id="fg-colorpicker-value" value="#e9a0a0">
                                 </div>
                             </div>
                             <!--Foreground:hover-->
                             <div class="slidecontainer color-container" id="fg-color-container-hover" style="display: flex; flex-direction: column; justify-content: center;">
-                                <label for="fg-colorpicker-hover">Foreground color</label>
+                                <label for="fg-colorpicker-hover">Foreground hover color</label>
                                 <div class="sliderlabel"style="flex-direction: row; justify-content: center; align-items: center; margin-left: auto; margin-right: auto;">
-                                    <input type="color" value="#e9a0a0" id="fg-colorpicker-hover"> <label style="margin-left: 10px; margin-right: auto; min-width: 100px;"><span id="fg-colorpicker-value-hover"></span></label>
+                                    <input type="color" value="#ffd0d0" id="fg-colorpicker-hover"><input type="text" id="fg-colorpicker-value-hover" value="#e9a0a0">
                                 </div>
                             </div>
                         </div>
