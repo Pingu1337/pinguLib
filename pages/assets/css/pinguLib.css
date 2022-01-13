@@ -488,7 +488,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-bottom: 0px solid red;
 }
 
 .pingu-slider {
@@ -517,8 +516,10 @@ body {
   border-radius: 50%;
   background: #e9a0a0;
   cursor: pointer;
+  box-shadow: -2px 0px 3px 1px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: -2px 0px 3px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: -2px 0px 3px 1px rgba(0, 0, 0, 0.1);
+  border: none;
+  outline: none;
 }
 
 .pingu-slider::-moz-range-thumb {
@@ -528,6 +529,9 @@ body {
   background: #e9a0a0;
   cursor: pointer;
   box-shadow: -2px 0px 3px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -2px 0px 3px 1px rgba(0, 0, 0, 0.1);
+  border: none;
+  outline: none;
 }
 
 @media only screen and (min-width: 768px) {

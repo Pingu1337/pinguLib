@@ -159,6 +159,9 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+async function CloseModal(){
+  modal.style.display = "none";
+}
 
 async function GetCode(){
   
