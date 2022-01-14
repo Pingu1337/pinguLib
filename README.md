@@ -1,7 +1,8 @@
 # pinguLib
 
 pinguLib is a free CSS & JavaScript library. <br>
-The library is in its early stages but the goal is to have a library that is easy to use and generates good looking websites. <br> 
+The library is being developed and is still in a very early stage. <br>
+The goal with this project is to have a library filled with good looking components and other front-end matter. <br>
 <hr>
 
 ### Live demo: https://pingu1337.github.io/pinguLib/
