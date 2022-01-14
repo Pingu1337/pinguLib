@@ -150,6 +150,177 @@ text-decoration: none;
     color: #e9a0a0;
 }
 
+
+
+/*pingu-nav-vertical*/
+.container{
+transition: .3s;
+}
+@media screen and (min-width: 865px) {
+    .container{
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+    .pingu-nav-vertical{
+        display: flex;
+        flex-direction: column;
+        background-color: #f3f1f1;
+        background-color: none;
+        border: 1px solid rgba(255, 255, 255, .3);
+        width: 100%;
+        height: 100%;
+        transition: transform .3s;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        box-shadow: inset .2rem .2rem .5rem #e0e0e0, 
+        inset -.2rem -.2rem .5rem #FFFFFF;
+
+        padding-top: 0rem;
+    }
+    .pingu-section {
+        position: fixed;
+        top: 0;
+        width: 150px;
+        height: auto;
+        transition: transform .3s;
+    }
+    
+    .left{
+        left: 0;
+        top: 10rem;
+    }
+    .pl-nav-link{
+        font-size: 1.2em;
+        color: #bebebe;
+        text-align: left;
+    }
+    .pl-nav-link:hover{
+        color: #8d8d8d;
+        box-shadow: inset -.1rem -.1rem .3rem #e0e0e0;
+    }
+    .pl-nav-link:hover .pl-nav-active{
+        color: #bebebe;
+        box-shadow: none;
+    }
+    .pl-nav-link:active{
+        box-shadow: inset -.15rem -.15rem .4rem #e0e0e0;
+    }
+    .nav-top{
+        border-top-right-radius: 25px;
+        border-top: none;
+    }
+    .nav-bottom{
+        border-bottom: none;
+        border-bottom-right-radius: 25px;
+    }
+    .pl-nav-active{
+        color: #000000;
+        box-shadow: inset -.2rem -.2rem .5rem #e0e0e0;
+    }
+    .pl-nav-active:hover{
+        color: #000000;
+        box-shadow: inset -.2rem -.2rem .5rem #e0e0e0;
+    }
+}
+
+/*mellan querys*/
+.pingu-nav-vertical-toggle{
+    transition: transform .3s;
+    transform: translateX(-150px);
+}
+@media screen and (max-width: 865px) {
+
+    .pingu-nav-vertical-toggle{
+        transform: translateX(0px);
+        position: fixed;
+        left: 0;
+        height: 100px;
+        width: 50px;
+        background-color: rgba(255, 255, 255, .1);
+        border: 1px solid rgba(255, 255, 255, .3);
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        backdrop-filter: blur(4px);
+        box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
+        0 4px 2px rgba(0,0,0,0.09), 
+        0 8px 4px rgba(0,0,0,0.09), 
+        0 16px 8px rgba(0,0,0,0.09),
+        0 32px 16px rgba(0,0,0,0.09);
+    }
+    .pingu-vertical-show{
+        transform: translateX(0px) !important;
+    }
+    .pingu-vertical-hide{
+        transform: translateX(-150px) !important;
+    }
+    .pingu-section {
+        transform: translateX(-150px);
+    }
+    .pingu-section:hover  .pingu-nav-vertical-toggle{
+        transform: translateX(-150px);
+    }
+
+    .pingu-nav-vertical{
+        transition: transform .3s;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+    .pingu-section {
+        position: fixed;
+        top: 0;
+        width: 150px;
+        height: auto;
+        background-color: rgba(255, 255, 255, .1);
+        border: 1px solid rgba(255, 255, 255, .3);
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        backdrop-filter: blur(4px);
+        transition: transform .3s;
+        box-shadow: 0 2px 1px rgba(0,0,0,0.09), 
+        0 4px 2px rgba(0,0,0,0.09), 
+        0 8px 4px rgba(0,0,0,0.09), 
+        0 16px 8px rgba(0,0,0,0.09),
+        0 32px 16px rgba(0,0,0,0.09);
+    }
+    .left{
+        left: 0;
+        top: 10rem;
+    }
+    .pl-nav-link{
+        font-size: 1.2em;
+        color: #bebebe;
+        text-align: left;
+        border-bottom: 0px solid rgba(0, 0, 0, 0.1);
+    }
+    .pl-nav-link:hover{
+        color: #8d8d8d;
+
+    }
+    /* .pl-nav-link:active{
+        
+    } */
+    .nav-top{
+        border-top-right-radius: 25px;
+    }
+    .nav-bottom{
+        border-bottom-right-radius: 25px;
+    }
+    .pl-nav-active{
+        color: #000000;
+    }
+    .pl-nav-active:hover{
+        color: #000000;
+    }
+}
+
+
+
+
+
 @media screen and (max-width: 600px) {
     .main{
         margin-left: 10px;

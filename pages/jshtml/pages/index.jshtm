@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="textbox">
+
+        <div class="btn-box">  
+            <h1 style="text-align: center;">Components</h1>
+            <p style="text-align: left; padding-left: 3rem; padding-right: 3rem; ">Here you will find all the different components included in pinguLib. <br>
+            Use the navigation menu on the left to browse through the components and learn how to implement them. <br>
+            Before you can use any of the components you need to import pinguLib in your project.</p>
+            <p style="text-align: center; padding-left: 3rem; padding-right: 3rem; padding-bottom: 3rem;"> Follow the <a class="text-link">installation guide</a> to get started. </p>
+        </div>  
+    </div>
+</div>
