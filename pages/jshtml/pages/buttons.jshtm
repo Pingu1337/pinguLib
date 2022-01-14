@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="textbox">
+
+        <div class="btn-box">  
+            <h1 style="text-align: center;">Buttons</h1>
+            <div class="b1 toggle-show" id="b1">
+                <pre class="code-snippet" style="width: 100%;"><code class="language-Markup"> &lt;button class="pingu-btn color-pink">pinguLib&lt;/button></code></pre>
+            </div>                    
+            <div class="b2" id="b2">
+                <pre class="code-snippet" style="width: 100%;"><code class="language-Markup"> &lt;button class="pingu-btn color-white">pinguLib&lt;/button></code></pre>
+            </div>
+            <button class="pingu-btn color-pink" onclick="ToggleShow(1)">pingu-btn</button>  
+            <button class="pingu-btn color-white" onclick="ToggleShow(2)">pingu-btn</button>  
+        </div>  
+    </div>
+</div>
