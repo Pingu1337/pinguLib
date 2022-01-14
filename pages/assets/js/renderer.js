@@ -104,6 +104,8 @@ var vSection = document.querySelector('.pingu-section');
 var vNav = document.querySelector('.pingu-nav-vertical');
 var vNavToggle = document.querySelector('.pingu-nav-vertical-toggle')
 if(vNavToggle){
+
+
     vNavToggle.addEventListener('mouseenter', async function(){
         if(vSection){
             if(vNav){
@@ -112,17 +114,21 @@ if(vNavToggle){
                 vNavToggle.classList.add('pingu-vertical-hide')
                 await sleep(100);
                 isToggled = true;
+
             }
         }
     });
-    // vNavToggle.addEventListener('mouseleave', function(){
-    //     if(vSection){
-    //         if(vNav){
-    //             vSection.classList.remove('pingu-vertical-show');
-    //             vNav.classList.remove('pingu-vertical-show');
-    //         }
-    //     }
-    // });
+    vNavToggle.addEventListener('touchend', async function(){
+        if(vSection){
+            if(vNav){
+                vSection.classList.add('pingu-vertical-show');
+                vNav.classList.add('pingu-vertical-show');
+                vNavToggle.classList.add('pingu-vertical-hide')
+                await sleep(200);
+                isToggled = true;
+            }
+        }
+    });
 }
 if(vSection){
     if(vNav){
