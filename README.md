@@ -17,7 +17,7 @@ The goal with this project is to have a library filled with good looking compone
 
   
 ```html
-<link href="https://cdn.jsdelivr.net/gh/Pingu1337/pinguLib@master/pages/assets/css/pinguLib.css" rel="stylesheet" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/gh/Pingu1337/pinguLib@latest/pages/assets/css/pinguLib.css" rel="stylesheet" crossorigin="anonymous">
 ```
 
 
@@ -38,7 +38,7 @@ The goal with this project is to have a library filled with good looking compone
 <p style="font-size:14px; color: grey;"><i>It is recommended to include the JavaScript as some features does not work without it.</i></p>
 
 ```HTML
-<script src="https://cdn.jsdelivr.net/gh/Pingu1337/pinguLib@master/pages/assets/js/pinguScripts.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/Pingu1337/pinguLib@latest/pages/assets/js/pinguScripts.js" crossorigin="anonymous"></script>
 ```
 
 <hr>
