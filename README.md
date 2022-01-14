@@ -8,22 +8,39 @@ The library is in its early stages but the goal is to have a library that is eas
 <hr>
 
 ## Get pinguLib with jsDelivr
-Copy-paste the stylesheet ```HTML <link>``` into your ```HTML <head>``` to load the CSS library.
+
 ## css
-```HTML
+> ```html
+> Copy-paste the stylesheet <link> into your <head> to load the CSS library.
+> ```
+
+  
+```html
 <link href="https://cdn.jsdelivr.net/gh/Pingu1337/pinguLib@master/pages/assets/css/pinguLib.css" rel="stylesheet" crossorigin="anonymous">
 ```
+
+
 ## JavaScript
-Copy-paste the  ```HTML <script>``` right before the closing of the
-```HTML </body>``` to enable extra features of pinguLib that require JavaScript.
-<p style="font-size:14px; color: grey;"><i>It is recomended to include the JavaScript as some features dont work without it.</i></p>
+> ```html
+> Copy-paste the <script></script> right before the closing of the <body> tag to enable extra features that require
+> JavaScript.
+> ```
+>> ```html
+>> <body>
+>>      . . .
+>>      your code here
+>>      . . .
+>>    <script>put the script at the bottom</script>
+>> </body>
+>>```
+
+<p style="font-size:14px; color: grey;"><i>It is recommended to include the JavaScript as some features does not work without it.</i></p>
 
 ```HTML
 <script src="https://cdn.jsdelivr.net/gh/Pingu1337/pinguLib@master/pages/assets/js/pinguScripts.js" crossorigin="anonymous"></script>
 ```
 
 <hr>
-
 
 <i>
 
