@@ -6,7 +6,9 @@
             <div>
                 <pre class="code-snippet"><code class="language-Markup"> &lt;input type="range" min="0" max="100" value="25" class="pingu-slider"></code></pre>
             </div>
-            <input type="range" min="0" max="100" value="25" class="pingu-slider" id="example-slider">   
+            
+                <input type="range" min="0" max="100" value="25" class="pingu-slider" id="example-slider" style="margin-top: 1rem; width: 90%;">   
+            
             <div style="margin-top: 2rem;">
                 <pre class="code-snippet"><code class="language-Markup">&lt;div class="pingu-slidercontainer">
 &lt;div class="pingu-sliderlabel w-md">
@@ -18,7 +20,7 @@
             <div class="pingu-slidercontainer">
                 <div class="pingu-sliderlabel w-md">
                     <label for="pingu-slider">Slider Value: <span id="pingu-slider-value"></span></label>
-                    <input type="range" min="0" max="100" value="50" class="pingu-slider mt-1">
+                    <input type="range" min="0" max="100" value="50" class="pingu-slider mt-1" style="margin-bottom: 1rem; width: 90%; align-self: center;">
                 </div>
             </div>
         </div>  

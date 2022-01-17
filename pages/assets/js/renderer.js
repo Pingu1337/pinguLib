@@ -30,6 +30,7 @@ async function GetScripts(){
         LoadScript(scriptSources[i]);
         };
     LoadSliders();
+    LoadToggleSwitches();
 };
 
 var fourofour;
@@ -168,3 +169,29 @@ document.querySelector('.pl-nav-link').addEventListener("click", function() {
     CloseVertNav();
 });
 
+
+
+
+async function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+    tabcontent[i].style.boxShadow = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" tab-active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " tab-active";
+    await sleep(10);
+    var media600 = window.matchMedia("(max-width: 600px)");
+    if(!media600.matches){
+    if(tabName == 'GotJS'){
+        document.getElementById(tabName).style.boxShadow = "inset .2rem -.2rem .2rem #e0e0e0";
+    } else{
+        document.getElementById(tabName).style.boxShadow = "inset -.2rem -.2rem .2rem #e0e0e0";
+    }
+}
+};

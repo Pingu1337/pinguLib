@@ -1,3 +1,12 @@
+$slider-bg:#ccc;
+
+$red: #ffa6a6;
+$green: #66bb6a;
+$blue: #98b2ff;
+$gold: #e7ddb3;
+$pink: #ffccf4;
+$purple: #cc99ff;
+
 :root{
     // Standard Colors
     --pl-white: #ffffff;
@@ -449,10 +458,159 @@ body{
     outline: none;
   }
 
+  // Toggle Switches
+  .pl-toggle {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .pl-toggle input {
+    display:none;
+  }
 
+  .pl-slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.11),
+                inset 1px 2px 2px rgba(0,0,0,0.11),
+                inset 1px 4px 4px rgba(0,0,0,0.11);
+    transition: .4s;
+  }
 
+  .pl-slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+    0 2px 2px rgba(0,0,0,0.11), 
+    0 4px 4px rgba(0,0,0,0.11), 
+    0 8px 8px rgba(0,0,0,0.11), 
+    0 16px 16px rgba(0,0,0,0.11), 
+    0 32px 32px rgba(0,0,0,0.11);
+  }
+  
+  .pl-toggle input:checked + .pl-slider {
+      background-color: $green;
+    box-shadow: inset -1px 1px 1px rgba(0,0,0,0.11),
+    inset -1px 2px 2px rgba(0,0,0,0.11),
+    inset -1px 4px 4px rgba(0,0,0,0.11);
+  }
+  
+  .pl-toggle input:checked + .pl-slider:before {
+    transform: translateX(26px);
+    box-shadow: -1px 1px 1px rgba(0,0,0,0.11), 
+    -2px 2px 2px rgba(0,0,0,0.11), 
+    -4px 4px 4px rgba(0,0,0,0.11), 
+    -8px 8px 8px rgba(0,0,0,0.11), 
+    -16px 16px 16px rgba(0,0,0,0.11), 
+    -32px 32px 32px rgba(0,0,0,0.11);
+  }
+  
+  .pl-slider.round {
+    border-radius: 34px;
+  }
+  
+  .pl-slider.round:before {
+    border-radius: 50%;
+  }
+  
+// Colors 
 
+  // Green
+  .green{
+    background-color: $green;
+  }
+  .text-green{
+    color: $green;
+  }
+  .pl-toggle input + .green{
+    background-color: $slider-bg;
+  }
+  .pl-toggle input:checked + .green{
+    background-color: $green;
+  }
 
+  //Blue
+  .blue{
+    background-color: $blue;
+  }
+  .text-blue{
+    color: $blue;
+  }
+  .pl-toggle input + .blue{
+    background-color: $slider-bg;
+  }
+  .pl-toggle input:checked + .blue{
+    background-color: $blue;
+  }
+
+  //Red
+  .red{
+    background-color: $red;
+  }
+  .text-red{
+    color: $red;
+  }
+  .pl-toggle input + .red{
+    background-color: $slider-bg;
+  }
+  .pl-toggle input:checked + .red{
+    background-color: $red;
+  }
+
+  //Gold
+  .gold{
+    background-color: $gold;
+  }
+  .text-gold{
+    color: $gold;
+  }
+  .pl-toggle input + .gold{
+    background-color: $slider-bg;
+  }
+  .pl-toggle input:checked + .gold{
+    background-color: $gold;
+  }
+
+  //Pink
+  .pink{
+    background-color: $pink;
+  }
+  .text-pink{
+    color: $pink;
+  }
+  .pl-toggle input + .pink{
+    background-color: $slider-bg;
+  }
+  .pl-toggle input:checked + .pink{
+    background-color: $pink;
+  }
+
+  //Purple
+  .purple{
+    background-color: $purple;
+  }
+  .text-purple{
+    color: $purple;
+  }
+  .pl-toggle input + .purple{
+    background-color: $slider-bg;
+  }
+  .pl-toggle input:checked + .purple{
+    background-color: $purple;
+  }
 
 
 
