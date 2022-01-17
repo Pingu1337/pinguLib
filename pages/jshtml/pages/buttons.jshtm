@@ -11,6 +11,33 @@
             </div>
             <button class="pingu-btn color-pink" onclick="ToggleShow(1)">pingu-btn</button>  
             <button class="pingu-btn color-white" onclick="ToggleShow(2)">pingu-btn</button>  
+            <p class="toggle-info-header">How to use</p>
+            <p class="toggle-info-text">
+                Copy and paste the above code into your project.
+                <br>See the <a class="text-link" href="install">installation guide</a> on how to get started.
+            </p>
         </div>  
     </div>
 </div>
+<style>
+    .toggle-info-header{
+    text-align: left;
+    margin-bottom: 0;
+    }
+    .toggle-info-text{
+        margin-top: 0;
+        text-align: left;
+        font-size: .9rem;
+    }
+    @media screen and (max-width: 600px) {
+    .toggle-info-header{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    }
+    .toggle-info-text{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+</style>

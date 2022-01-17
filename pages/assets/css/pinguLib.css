@@ -534,6 +534,162 @@ body {
   outline: none;
 }
 
+.pl-toggle {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.pl-toggle input {
+  display: none;
+}
+
+.pl-slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.11), inset 1px 2px 2px rgba(0, 0, 0, 0.11), inset 1px 4px 4px rgba(0, 0, 0, 0.11);
+          box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.11), inset 1px 2px 2px rgba(0, 0, 0, 0.11), inset 1px 4px 4px rgba(0, 0, 0, 0.11);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.pl-slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  -webkit-transition: .4s;
+  transition: .4s;
+  width: 26px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11), 0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11), 0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+}
+
+.pl-toggle input:checked + .pl-slider {
+  background-color: #66bb6a;
+  -webkit-box-shadow: inset -1px 1px 1px rgba(0, 0, 0, 0.11), inset -1px 2px 2px rgba(0, 0, 0, 0.11), inset -1px 4px 4px rgba(0, 0, 0, 0.11);
+          box-shadow: inset -1px 1px 1px rgba(0, 0, 0, 0.11), inset -1px 2px 2px rgba(0, 0, 0, 0.11), inset -1px 4px 4px rgba(0, 0, 0, 0.11);
+}
+
+.pl-toggle input:checked + .pl-slider:before {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+  -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.11), -2px 2px 2px rgba(0, 0, 0, 0.11), -4px 4px 4px rgba(0, 0, 0, 0.11), -8px 8px 8px rgba(0, 0, 0, 0.11), -16px 16px 16px rgba(0, 0, 0, 0.11), -32px 32px 32px rgba(0, 0, 0, 0.11);
+          box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.11), -2px 2px 2px rgba(0, 0, 0, 0.11), -4px 4px 4px rgba(0, 0, 0, 0.11), -8px 8px 8px rgba(0, 0, 0, 0.11), -16px 16px 16px rgba(0, 0, 0, 0.11), -32px 32px 32px rgba(0, 0, 0, 0.11);
+}
+
+.pl-slider.round {
+  border-radius: 34px;
+}
+
+.pl-slider.round:before {
+  border-radius: 50%;
+}
+
+.green {
+  background-color: #66bb6a;
+}
+
+.text-green {
+  color: #66bb6a;
+}
+
+.pl-toggle input + .green {
+  background-color: #ccc;
+}
+
+.pl-toggle input:checked + .green {
+  background-color: #66bb6a;
+}
+
+.blue {
+  background-color: #98b2ff;
+}
+
+.text-blue {
+  color: #98b2ff;
+}
+
+.pl-toggle input + .blue {
+  background-color: #ccc;
+}
+
+.pl-toggle input:checked + .blue {
+  background-color: #98b2ff;
+}
+
+.red {
+  background-color: #ffa6a6;
+}
+
+.text-red {
+  color: #ffa6a6;
+}
+
+.pl-toggle input + .red {
+  background-color: #ccc;
+}
+
+.pl-toggle input:checked + .red {
+  background-color: #ffa6a6;
+}
+
+.gold {
+  background-color: #e7ddb3;
+}
+
+.text-gold {
+  color: #e7ddb3;
+}
+
+.pl-toggle input + .gold {
+  background-color: #ccc;
+}
+
+.pl-toggle input:checked + .gold {
+  background-color: #e7ddb3;
+}
+
+.pink {
+  background-color: #ffccf4;
+}
+
+.text-pink {
+  color: #ffccf4;
+}
+
+.pl-toggle input + .pink {
+  background-color: #ccc;
+}
+
+.pl-toggle input:checked + .pink {
+  background-color: #ffccf4;
+}
+
+.purple {
+  background-color: #cc99ff;
+}
+
+.text-purple {
+  color: #cc99ff;
+}
+
+.pl-toggle input + .purple {
+  background-color: #ccc;
+}
+
+.pl-toggle input:checked + .purple {
+  background-color: #cc99ff;
+}
+
 @media only screen and (min-width: 768px) {
   .pingu-swipe-area {
     pointer-events: none;

@@ -1,0 +1,169 @@
+<div class="container">
+    <div class="textbox">
+
+        <div class="btn-box">  
+            <h1 style="text-align: center;">Toggle Switches</h1>
+
+            <div class="toggle-container">
+                <div class="toggle-query">
+                    <div class="toggle-box">
+                        <label class="text-red red text-shadow-inset" title="Red"> Red </label>
+                            <pl-toggle Color="red" Name="Example1" /></pl-toggle>
+                    </div>
+
+                    <div class="toggle-box">
+                        <label class="text-green green text-shadow-inset"> Green </label>
+                            <pl-toggle Color="green" Name="Example2" /></pl-toggle>
+                    </div>
+
+                    <div class="toggle-box">
+                        <label class="text-blue blue text-shadow-inset"> Blue </label>
+                            <pl-toggle Color="blue" Name="Example3" /></pl-toggle>
+                    </div>
+                </div>
+                <div class="toggle-query">
+                    <div class="toggle-box">
+                        <label class="text-gold gold text-shadow-inset"> Gold </label>
+                            <pl-toggle Color="gold" Name="Example4" /></pl-toggle>
+                    </div>
+
+                    <div class="toggle-box">
+                        <label class="text-pink pink text-shadow-inset"> Pink </label>
+                            <pl-toggle Color="pink" Name="Example5" /></pl-toggle>
+                    </div>
+
+                    <div class="toggle-box">
+                        <label class="text-purple purple text-shadow-inset"> Purple </label>
+                            <pl-toggle Color="purple" Name="Example6" /></pl-toggle>
+                    </div>
+                </div>
+            </div>  
+            <div class="tab">
+                <button class="tablinks tab-left tab-active" onclick="openTab(event, 'GotJS')">pinguScripts</button>
+                <button class="tablinks tab-right" onclick="openTab(event, 'NoJS')">pinguLib(css only)</button>
+              </div>
+
+            <div id="GotJS" class="tabcontent tab-left" style="margin-top: 0rem; display: block;">
+                
+                <pre class="code-snippet"><code class="language-Markup">&lt;pl-toggle Color="red" Name="Example" />&lt;/pl-toggle></code></pre>
+                <p class="snippet-text">This code requires <i>pinguScripts</i> JavaScript library in order to work properly.<br> See the <a class="text-link" href="install">installation guide</a>.</p>
+            </div>
+            <div id="NoJS" class="tabcontent tab-right" style="margin-top: 0rem;">
+                <pre class="code-snippet"><code class="language-Markup">&lt;label class="pl-toggle" for="ExampleCheckbox">
+    &lt;input type="checkbox" id="ExampleCheckbox" />
+    &lt;div class="pl-slider round red">&lt;/div>
+&lt;/label></code></pre>
+            </div>
+            <p class="toggle-info-header">How to use</p>
+            <p class="toggle-info-text">
+                Copy and paste the above code into your project.
+                The only required attribute for the pinguScripts version is <i>Name</i> which sets the ID for the input so its value can be identified and used within JavaScript. <br>
+                Additional attributes are Color which defines the color of the toggle switch when toggled on, use lowercase letters when defining the color attribute. 
+                See the available colors on the toggle-switches above. <br>
+                For the <i>pure CSS version</i> the color is defined in the class name of the <i>'div-element'</i> after <i>'pl-slider round '</i>. <br>
+                Use lowercase letters when defining the color attribute here aswell.
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+.toggle-info-header{
+    text-align: left;
+    margin-bottom: 0;
+}
+.toggle-info-text{
+    margin-top: 0;
+    text-align: left;
+    font-size: .9rem;
+}
+.tab {
+    margin-top: 5rem;
+    overflow: hidden;
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 1rem;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-top: 1px solid #ececec;
+  /* border-left: 1px solid #ececec; */
+  /* border-right: 1px solid #ccc; */
+}
+
+.tab button:hover.tab-left {
+    box-shadow: inset 0rem .1rem .1rem #e0e0e0;
+}
+.tab button:hover.tab-right {
+    box-shadow: inset 0rem .1rem .1rem #e0e0e0;
+}
+
+.tab button.tab-active {
+  background-color: inherit;
+}
+.tab button.tab-active:hover.tab-left {
+    box-shadow: inset .2rem .2rem .2rem #e0e0e0;
+}
+.tab button.tab-active:hover.tab-right {
+    box-shadow: inset -.2rem .2rem .2rem #e0e0e0;
+}
+
+.tab-left.tab-active{
+    box-shadow: inset .2rem .2rem .2rem #e0e0e0;
+}
+.tab-right.tab-active{
+    box-shadow: inset -.2rem .2rem .2rem #e0e0e0;
+}
+
+.tabcontent {
+  display: none;
+  padding: 2rem 2rem;
+  border-top: none;
+  transition: .3s;
+}
+@media screen and (min-width: 600px) {
+    .tabcontent.tab-left{
+        box-shadow: inset .2rem -.2rem .2rem #e0e0e0;
+    }
+    .tabcontent.tab-right{
+        box-shadow: inset -.2rem -.2rem .2rem #e0e0e0;
+    }
+}
+.snippet-text{
+    font-size: .9rem;
+    color: #a7a7a7;
+}
+@media screen and (max-width: 600px) {
+    .tab button {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    .tab button.tab-left {
+        border-top-right-radius: 20px;
+    }
+    .tab button.tab-right {
+        border-top-left-radius: 20px;
+    }
+    .tabcontent {
+        padding: 0;
+    }
+    .toggle-info-header{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    }
+    .toggle-info-text{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+</style>

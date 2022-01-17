@@ -228,3 +228,46 @@ function UpdateSlider() {
         };
     };
 };
+// |__________________________________________________________________________________________| //
+// |                                 Toggle Switch section                                    | //
+// |__________________________________________________________________________________________| //
+
+function LoadToggleSwitches(){
+    var toggleArr = document.getElementsByTagName('pl-toggle');
+    if(toggleArr.length > 0){
+        var colors = []
+        var names = []
+        for(i = 0; i < toggleArr.length; i++){
+            colors +=  toggleArr[i].getAttribute("Color") + ',';
+            names +=  toggleArr[i].getAttribute("Name") + ',';
+        };
+        colors = colors.split(',');
+        colors.pop();
+        names = names.split(',');
+        names.pop();
+        for(i = 0; i < toggleArr.length; i++){
+            CreateToggleElement('label', names[i], colors[i], i)
+        };
+    };
+};
+async function CreateToggleElement(tag, name, color, count){
+    var cl = 'pl-slider round ' + color;
+    
+    const newToggle = document.createElement(tag);
+        newToggle.setAttribute('class','pl-toggle');
+        newToggle.setAttribute('for', name);
+
+    const newInput = document.createElement('input');
+        newInput.setAttribute('type', 'checkbox');
+        newInput.setAttribute('id', name);
+
+    const newSlider = document.createElement('div');
+        newSlider.setAttribute('class',cl);
+        
+    newToggle.appendChild(newInput);
+    newToggle.appendChild(newSlider);
+    
+    var parents = document.getElementsByTagName('pl-toggle');
+        parents[count].appendChild(newToggle);
+};
+LoadToggleSwitches();
